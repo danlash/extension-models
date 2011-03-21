@@ -1,0 +1,7 @@
+C:\Users\Dan Lash\Projects\ExtensionModels\ExtensionModels\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Dan Lash\Projects\ExtensionModels\ExtensionModels\bin\ExtensionModels.dll
+C:\Users\Dan Lash\Projects\ExtensionModels\ExtensionModels\bin\ExtensionModels.pdb
+C:\Users\Dan Lash\Projects\ExtensionModels\ExtensionModels\obj\Debug\ExtensionModels.dll
+C:\Users\Dan Lash\Projects\ExtensionModels\ExtensionModels\obj\Debug\ExtensionModels.pdb
+C:\Users\Dan Lash\Projects\ExtensionModels\ExtensionModels\bin\Core.dll
+C:\Users\Dan Lash\Projects\ExtensionModels\ExtensionModels\bin\Core.pdb
