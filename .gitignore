@@ -1,0 +1,9 @@
+*.user
+*.suo
+*resharper.user
+_ReSharper.*/
+*.sln.cache
+obj
+bin
+*.orig
+
