@@ -11,14 +11,14 @@ namespace ExtensionModels.Core
         {
             Name = name;
             DateOfBirth = dateOfBirth;
-            _addresses = new List<string>();
+            _addresses = new List<Address>();
         }
 
         public string Name { get; private set; }
         public DateTime DateOfBirth { get; private set; }
 
-        public IEnumerable<string> Addresses { get { return _addresses; } }
-        internal IList<string> _addresses { get; set; }
+        public IEnumerable<Address> Addresses { get { return _addresses; } }
+        internal IList<Address> _addresses { get; set; }
     }
 
     public static class PersonExtensions 
@@ -37,9 +37,12 @@ namespace ExtensionModels.Core
             return age;
         } //http://wiki.lessthandot.com/index.php/ASP.NET:_Calculate_a_person's_age_from_their_date_of_birth
 
-        public static void AddAddress(this Person person, string address)
+        public static Address AddAddress(this Person person, string address)
         {
-            person._addresses.Add(address);
+        	var addr = Address.Parse(address);
+            person._addresses.Add(addr);
+
+        	return addr;
         }
     }
 }

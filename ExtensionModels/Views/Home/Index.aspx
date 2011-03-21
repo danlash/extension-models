@@ -75,11 +75,32 @@
         <output for="date_of_birth"></output>
     </section>
 
+	 <section class="promote">
+        <header>Promote An Employee</header>
+        <form action="<%= Url.Action("Promote") %>" method="post">
+            <label for="employee">Employee</label>
+            <select name="employeeId", id="employee">
+                <option value="1">Steve Harman</option>
+            </select>
+
+			<label for="title">Title</label>
+            <input type="text" required="required" name="NewTitle" id="title" 
+            placeholder="CTO" />
+
+            <label for="address">Address</label>
+            <input type="text" required="required" name="NewAddress" id="office_address" 
+            placeholder="6622 Shiloh Rd, Alpharetta, GA, 30003" />
+
+            <button type="submit">Promote</button>
+        </form>
+        <output for="title office_address"></output>
+    </section>
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery-ui/1.8.11/jquery-ui.min.js"></script>
     <script type="text/javascript">
         $(function () {
-            $.each(['.age', '.address'], function () {
+            $.each(['.age', '.address', '.promote'], function () {
                 var $container = $(this.toString());
                 
                 $('form', $container).submit(function (e) {

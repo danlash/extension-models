@@ -43,7 +43,7 @@ namespace ExtensionModels.Controllers
         [HttpPost]
         public ActionResult AddAddress(int personId, string address)
         {
-            var repository = new Repository<Person>();
+			var repository = new PersonRepository();
             var person = repository.FindById(personId);
             
             person.AddAddress(address);
@@ -55,6 +55,22 @@ namespace ExtensionModels.Controllers
 
             return view;
         }
+
+		[HttpPost]
+		public ActionResult Promote(int employeeId, string newTitle, string newAddress)
+		{
+			var repository = new EmployeeRepository();
+			var employee = repository.FindById(employeeId);
+
+			employee.Promote(newTitle, newAddress);
+			
+			repository.Save(employee);
+
+			var view = PartialView();
+			view.ViewData["employee"] = employee;
+
+			return view;
+		}
     }
 
     public static class DateExtensions
